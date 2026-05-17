@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Phase Black Velvet — production studio and artist. Deep house, techno, and electronic sound design." />
+  <title>Phase Black Velvet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#050508',
+            ink: '#0c0c10',
+            smoke: '#141418',
+            mist: '#1e1e24',
+            ash: '#6b6b78',
+            pearl: '#a8a8b4',
+            bone: '#e8e8ec',
+            accent: '#7c3aed',
+            glow: '#a78bfa',
+          },
+          fontFamily: {
+            display: ['"Syne"', 'system-ui', 'sans-serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '0.35em',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #050508;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.12), transparent),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+  .noise::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 50;
+    }
+
+    .glow-line {
+      background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.5), transparent);
+      height: 1px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.4);
+    }
+
+    .embed-card iframe {
+      border: 0;
+      width: 100%;
+      min-height: 120px;
+    }
+  </style>
+</head>
+<body class="noise font-body text-bone antialiased">
+  <!-- Nav -->
+  <header class="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-void/80 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#" class="font-display text-sm font-semibold tracking-widest text-bone uppercase">
+        Phase Black Velvet
+      </a>
+      <ul class="hidden items-center gap-8 text-xs font-medium tracking-widest text-ash uppercase sm:flex">
+        <li><a href="#bio" class="transition hover:text-glow">Bio</a></li>
+        <li><a href="#video" class="transition hover:text-glow">Video</a></li>
+        <li><a href="#releases" class="transition hover:text-glow">Releases</a></li>
+        <li><a href="#contact" class="transition hover:text-glow">Contact</a></li>
+      </ul>
+      <a href="#contact" class="rounded-sm border border-white/10 bg-smoke/50 px-4 py-2 text-xs font-medium tracking-widest text-pearl uppercase transition hover:border-glow/40 hover:text-glow">
+        Book
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative flex min-h-screen flex-col items-center justify-center px-6 pt-24 pb-16">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute top-1/3 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+      </div>
+      <div class="relative z-10 mx-auto max-w-4xl text-center">
+        <p class="mb-6 text-xs font-medium tracking-widest text-glow uppercase">Production Studio · Artist</p>
+        <h1 class="font-display text-5xl font-bold leading-none tracking-tight text-bone sm:text-7xl md:text-8xl">
+          Phase<br />
+          <span class="bg-gradient-to-r from-bone via-pearl to-ash bg-clip-text text-transparent">Black Velvet</span>
+        </h1>
+        <div class="glow-line mx-auto my-10 w-32"></div>
+        <p class="mx-auto max-w-md text-base font-light leading-relaxed text-ash sm:text-lg">
+          Deep house &amp; techno atmospheres. Late-night grooves, analog warmth, and precision-engineered sound.
+        </p>
+        <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="#releases" class="group inline-flex items-center gap-2 rounded-sm bg-accent px-8 py-3.5 text-xs font-semibold tracking-widest text-white uppercase transition hover:bg-glow">
+            Listen
+            <svg class="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#video" class="inline-flex items-center gap-2 rounded-sm border border-white/10 px-8 py-3.5 text-xs font-semibold tracking-widest text-pearl uppercase transition hover:border-glow/30 hover:text-glow">
+            Watch
+          </a>
+        </div>
+      </div>
+      <a href="#bio" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-ash transition hover:text-glow" aria-label="Scroll down">
+        <svg class="h-6 w-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </section>
+
+    <!-- Artist Bio -->
+    <section id="bio" class="border-t border-white/5 py-24 px-6">
+      <div class="mx-auto grid max-w-6xl gap-16 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-4">
+          <p class="text-xs font-medium tracking-widest text-glow uppercase">Artist Bio</p>
+          <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-bone sm:text-4xl">
+            Sound as texture
+          </h2>
+        </div>
+        <div class="lg:col-span-8 space-y-6 text-base leading-relaxed text-ash">
+          <p>
+            <span class="text-pearl">Phase Black Velvet</span> is a production studio and solo artist project rooted in the intersection of deep house, minimal techno, and cinematic electronic music. Every release is built from the floor up—tight kicks, submerged bass, and hypnotic motifs that unfold slowly across the night.
+          </p>
+          <p>
+            From warehouse sessions to headphone journeys, the work prioritizes space, tension, and release. The studio handles composition, mixing, mastering prep, and sound design for artists who want a nocturnal, forward-leaning aesthetic without losing warmth.
+          </p>
+          <ul class="flex flex-wrap gap-3 pt-4">
+            <li class="rounded-sm border border-white/5 bg-smoke/50 px-3 py-1.5 text-xs tracking-wider text-pearl uppercase">Deep House</li>
+            <li class="rounded-sm border border-white/5 bg-smoke/50 px-3 py-1.5 text-xs tracking-wider text-pearl uppercase">Techno</li>
+            <li class="rounded-sm border border-white/5 bg-smoke/50 px-3 py-1.5 text-xs tracking-wider text-pearl uppercase">Production</li>
+            <li class="rounded-sm border border-white/5 bg-smoke/50 px-3 py-1.5 text-xs tracking-wider text-pearl uppercase">Mixing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video -->
+    <section id="video" class="border-t border-white/5 bg-ink/50 py-24 px-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-medium tracking-widest text-glow uppercase">Visual</p>
+            <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-bone sm:text-4xl">Latest session</h2>
+          </div>
+          <p class="max-w-sm text-sm text-ash">Live mix, studio diary, or official visual—replace the embed URL with your channel video.</p>
+        </div>
+        <div class="relative aspect-video overflow-hidden rounded-sm border border-white/10 bg-smoke shadow-2xl shadow-accent/5">
+          <!-- Replace VIDEO_ID with your YouTube video ID -->
+          <iframe
+            class="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1&color=white"
+            title="Phase Black Velvet — YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Releases Grid: Bandcamp / DistroKid -->
+    <section id="releases" class="border-t border-white/5 py-24 px-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-12">
+          <p class="text-xs font-medium tracking-widest text-glow uppercase">Releases</p>
+          <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-bone sm:text-4xl">Stream &amp; buy</h2>
+          <p class="mt-4 max-w-xl text-sm text-ash">Bandcamp embeds and DistroKid smart links. Swap URLs below with your live releases.</p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Bandcamp embed: replace album/track URL in data attributes & iframe src -->
+          <article class="embed-card group overflow-hidden rounded-sm border border-white/10 bg-smoke transition hover:border-glow/30">
+            <div class="border-b border-white/5 px-5 py-4">
+              <p class="text-xs tracking-widest text-glow uppercase">Bandcamp</p>
+              <h3 class="mt-1 font-display text-lg font-semibold text-bone">EP — Midnight Phase</h3>
+            </div>
+            <div class="p-4">
+              <iframe
+                style="border: 0; width: 100%; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/album=0/size=large/bgcol=141418/linkcol=a78bfa/tracklist=false/artwork=small/transparent=true/"
+                seamless
+                title="Bandcamp — Midnight Phase"
+              ></iframe>
+            </div>
+            <a href="https://phaseblackvelvet.bandcamp.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border-t border-white/5 px-5 py-3 text-xs tracking-widest text-ash uppercase transition group-hover:text-glow">
+              Open on Bandcamp
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <article class="embed-card group overflow-hidden rounded-sm border border-white/10 bg-smoke transition hover:border-glow/30">
+            <div class="border-b border-white/5 px-5 py-4">
+              <p class="text-xs tracking-widest text-glow uppercase">Bandcamp</p>
+              <h3 class="mt-1 font-display text-lg font-semibold text-bone">Single — Velvet Drift</h3>
+            </div>
+            <div class="p-4">
+              <iframe
+                style="border: 0; width: 100%; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=0/size=large/bgcol=141418/linkcol=a78bfa/artwork=small/transparent=true/"
+                seamless
+                title="Bandcamp — Velvet Drift"
+              ></iframe>
+            </div>
+            <a href="https://phaseblackvelvet.bandcamp.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border-t border-white/5 px-5 py-3 text-xs tracking-widest text-ash uppercase transition group-hover:text-glow">
+              Open on Bandcamp
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <!-- DistroKid smart link card (no native embed — styled link hub) -->
+          <article class="group flex flex-col overflow-hidden rounded-sm border border-white/10 bg-smoke transition hover:border-glow/30">
+            <div class="border-b border-white/5 px-5 py-4">
+              <p class="text-xs tracking-widest text-glow uppercase">DistroKid</p>
+              <h3 class="mt-1 font-display text-lg font-semibold text-bone">All platforms</h3>
+            </div>
+            <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+              <p class="text-sm leading-relaxed text-ash">Spotify, Apple Music, Tidal, and more via your DistroKid hyperfollow or smart link.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-sm bg-mist px-2.5 py-1 text-[10px] tracking-wider text-pearl uppercase">Spotify</span>
+                <span class="rounded-sm bg-mist px-2.5 py-1 text-[10px] tracking-wider text-pearl uppercase">Apple</span>
+                <span class="rounded-sm bg-mist px-2.5 py-1 text-[10px] tracking-wider text-pearl uppercase">Tidal</span>
+              </div>
+            </div>
+            <a href="https://distrokid.com/hyperfollow/phaseblackvelvet" target="_blank" rel="noopener noreferrer" class="mt-auto flex items-center justify-between border-t border-white/5 bg-accent/10 px-5 py-4 text-xs font-semibold tracking-widest text-glow uppercase transition group-hover:bg-accent/20">
+              HyperFollow link
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-sm border border-white/10 bg-smoke transition hover:border-glow/30 sm:col-span-2 lg:col-span-1">
+            <div class="border-b border-white/5 px-5 py-4">
+              <p class="text-xs tracking-widest text-glow uppercase">DistroKid</p>
+              <h3 class="mt-1 font-display text-lg font-semibold text-bone">Latest single</h3>
+            </div>
+            <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+              <p class="text-sm leading-relaxed text-ash">Direct smart link for your newest DistroKid release.</p>
+            </div>
+            <a href="https://distrokid.com/" target="_blank" rel="noopener noreferrer" class="mt-auto flex items-center justify-between border-t border-white/5 px-5 py-3 text-xs tracking-widest text-ash uppercase transition group-hover:text-glow">
+              Smart link
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-sm border border-white/10 bg-smoke transition hover:border-glow/30 sm:col-span-2">
+            <div class="border-b border-white/5 px-5 py-4">
+              <p class="text-xs tracking-widest text-glow uppercase">Bandcamp</p>
+              <h3 class="mt-1 font-display text-lg font-semibold text-bone">Full discography</h3>
+            </div>
+            <div class="flex flex-1 items-center justify-between gap-6 p-6 sm:p-8">
+              <p class="max-w-md text-sm text-ash">Embed your Bandcamp artist page or add a wide album player—generate embed code at bandcamp.com/you?from=embed</p>
+              <a href="https://phaseblackvelvet.bandcamp.com" target="_blank" rel="noopener noreferrer" class="shrink-0 rounded-sm border border-glow/30 px-6 py-3 text-xs font-semibold tracking-widest text-glow uppercase transition hover:bg-accent/20">
+                Visit store
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-white/5 bg-ink/50 py-24 px-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="grid gap-16 lg:grid-cols-2">
+          <div>
+            <p class="text-xs font-medium tracking-widest text-glow uppercase">Contact</p>
+            <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-bone sm:text-4xl">Let's work</h2>
+            <p class="mt-6 text-base leading-relaxed text-ash">
+              Bookings, remix inquiries, production collabs, or licensing. Drop a line and you'll hear back within 48 hours.
+            </p>
+            <dl class="mt-10 space-y-4 text-sm">
+              <div>
+                <dt class="text-xs tracking-widest text-ash uppercase">Email</dt>
+                <dd class="mt-1"><a href="mailto:hello@phaseblackvelvet.com" class="text-pearl transition hover:text-glow">hello@phaseblackvelvet.com</a></dd>
+              </div>
+              <div>
+                <dt class="text-xs tracking-widest text-ash uppercase">Location</dt>
+                <dd class="mt-1 text-pearl">Studio — by appointment</dd>
+              </div>
+            </dl>
+          </div>
+
+          <form class="space-y-5 rounded-sm border border-white/10 bg-smoke/80 p-8 backdrop-blur-sm" action="#" method="post">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="name" class="mb-2 block text-xs tracking-widest text-ash uppercase">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  class="w-full rounded-sm border border-white/10 bg-void px-4 py-3 text-sm text-bone placeholder:text-ash/60 transition focus:border-glow/40"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-xs tracking-widest text-ash uppercase">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  class="w-full rounded-sm border border-white/10 bg-void px-4 py-3 text-sm text-bone placeholder:text-ash/60 transition focus:border-glow/40"
+                  placeholder="you@email.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="subject" class="mb-2 block text-xs tracking-widest text-ash uppercase">Subject</label>
+              <select
+                id="subject"
+                name="subject"
+                class="w-full rounded-sm border border-white/10 bg-void px-4 py-3 text-sm text-bone transition focus:border-glow/40"
+              >
+                <option value="booking">Booking / Live</option>
+                <option value="production">Production / Mix</option>
+                <option value="remix">Remix inquiry</option>
+                <option value="licensing">Licensing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="mb-2 block text-xs tracking-widest text-ash uppercase">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="w-full resize-y rounded-sm border border-white/10 bg-void px-4 py-3 text-sm text-bone placeholder:text-ash/60 transition focus:border-glow/40"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full rounded-sm bg-accent py-3.5 text-xs font-semibold tracking-widest text-white uppercase transition hover:bg-glow sm:w-auto sm:px-10"
+            >
+              Send message
+            </button>
+            <p class="text-xs text-ash">Wire this form to Formspree, Netlify Forms, or your backend by updating the <code class="text-pearl">action</code> attribute.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 px-6 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
+      <p class="font-display text-xs tracking-widest text-ash uppercase">&copy; <span id="year"></span> Phase Black Velvet</p>
+      <div class="flex gap-6">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-ash transition hover:text-glow" aria-label="Instagram">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="text-ash transition hover:text-glow" aria-label="SoundCloud">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M1.175 13.5c-.645 0-1.175.53-1.175 1.175v2.65c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175v-2.65c0-.645-.53-1.175-1.175-1.175H1.175zm3.5-2.5c-.645 0-1.175.53-1.175 1.175v5.15c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175v-5.15c0-.645-.53-1.175-1.175-1.175h-1.65zm3.5-3c-.645 0-1.175.53-1.175 1.175v8.15c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175v-8.15c0-.645-.53-1.175-1.175-1.175h-1.65zm3.5-2.5c-.645 0-1.175.53-1.175 1.175v10.65c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175V9.675c0-.645-.53-1.175-1.175-1.175h-1.65zm3.5 1c-.645 0-1.175.53-1.175 1.175v9.65c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175v-9.65c0-.645-.53-1.175-1.175-1.175h-1.65zm3.5 2.5c-.645 0-1.175.53-1.175 1.175v7.15c0 .645.53 1.175 1.175 1.175h1.65c.645 0 1.175-.53 1.175-1.175v-7.15c0-.645-.53-1.175-1.175-1.175h-1.65zm4-1c-.645 0-1.175.53-1.175 1.175v5.15c0 .645.53 1.175 1.175 1.175h9.325c2.76 0 5-2.24 5-5s-2.24-5-5-5c-.69 0-1.345.14-1.94.395-.89-2.305-3.14-3.945-5.81-3.945-.645 0-1.175.53-1.175 1.175v6.375z"/></svg>
+        </a>
+        <a href="https://phaseblackvelvet.bandcamp.com" target="_blank" rel="noopener noreferrer" class="text-ash transition hover:text-glow" aria-label="Bandcamp">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('form').addEventListener('submit', function (e) {
+      if (this.getAttribute('action') === '#') {
+        e.preventDefault();
+        alert('Connect this form to your backend (e.g. Formspree) by setting the form action URL.');
+      }
+    });
+  </script>
+</body>
+</html>
